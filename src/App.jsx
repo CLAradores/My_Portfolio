@@ -5,8 +5,8 @@ const App = () => {
     <div>
       <Header />
       <Hero />
-      {/* <About />
-      <Skills />
+      {/* <About /> */}
+      {/* <Skills />
       <Portfolio />
       <Contact /> */}
     </div>

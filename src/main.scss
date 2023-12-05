@@ -34,6 +34,13 @@ body {
   background-color: var(--bg-color);
 }
 
+#navbar {
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  position: fixed;
+}
+
 #icons path {
   fill: var(--primary-color);
 }
@@ -72,7 +79,6 @@ body {
   transition: 0.5s ease-in-out;
 }
 .icon:hover {
-  fill: var(--bg-color);
   color: var(--bg-color);
   border-color: var(--bg-color);
 }
@@ -91,4 +97,11 @@ li {
   border-color: var(--primary-color);
   color: var(--primary-color);
   transition: 0.5s ease-in-out;
+}
+
+#up_button {
+  fill: var(--primary-color);
+  bottom: 20px;
+  right: 3rem;
+  z-index: 99;
 }

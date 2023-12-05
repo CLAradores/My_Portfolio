@@ -1,12 +1,32 @@
 import heroPic from '../assets/2.png';
 
 export const Hero = () => {
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 100 ||
+      document.documentElement.scrollTop > 100
+    ) {
+      document.getElementById('up_button').style.display = 'block';
+    } else {
+      document.getElementById('up_button').style.display = 'none';
+    }
+  }
+
+  function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
   return (
-    <div>
+    <div id="home">
       <main className="lg:max-w-screen-xl  container mx-auto --text-color">
         <div
           className=" flex  lg:flex-row justify-between items-center "
-          style={{ height: '80vh' }}
+          style={{ height: '95vh' }}
         >
           <div className=" w-screen lg:w-3/4 mx-auto">
             <h3 className="text-3xl font-bold">Hello, It's Me</h3>
@@ -14,12 +34,17 @@ export const Hero = () => {
               Charles Lester Radores
             </h2>
             <h3 className="text-2xl mb-5 font-semibold">
-              Your Disciplined and Dedicated Full-Stack Web Developer.
+              Your Disciplined and Dedicated
+              <span className="underline-1"> Full-Stack Web Developer.</span>
             </h3>
             <p className="text-base w-4/5 mb-5 font-semibold">
-              Embracing the timeless wisdom of Stoic philosophy, I approach
+              " Embracing the timeless wisdom of Stoic philosophy, I approach
               challenges with resilience, finding tranquility in the midst of
-              the coding storm. In every bug, I find an opportunity for growth.
+              the coding storm.{' '}
+              <span className="underline-2">
+                In every bug, I find an opportunity for growth.
+              </span>
+              "
             </p>
             <div id="icons" className="flex mb-5">
               <div className="border-2 --icons-border rounded-full p-3 mr-5 flex justify-center items-center icon">
@@ -77,6 +102,20 @@ export const Hero = () => {
           </div>
         </div>
       </main>
+      <div
+        id="up_button"
+        className="flex justify-end fixed"
+        onClick={scrollToTop}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="34"
+          width="28"
+          viewBox="0 0 384 512"
+        >
+          <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
+        </svg>
+      </div>
     </div>
   );
 };
