@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./src/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="./img/icon2.png" />
     <link href="/dist/output.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -53,7 +54,11 @@
           </p>
           <div class="flex">
             <div class="btn-con mr-3">
-              <a href="" class="main-btn">
+              <a
+                href="./img/Charles_Lester_Radores_01CV.pdf"
+                download="Charles_Lester_Radores_01CV.pdf"
+                class="main-btn"
+              >
                 <span class="btn-text">Download CV</span>
                 <span class="btn-icon"><i class="fas fa-download"></i></span>
               </a>
@@ -154,7 +159,11 @@
             </div>
             <div class="flex mt-10">
               <div class="btn-con mr-3">
-                <a href="" class="main-btn">
+                <a
+                  href="./img/Charles_Lester_Radores_01CV.pdf"
+                  download="Charles_Lester_Radores_01CV.pdf"
+                  class="main-btn"
+                >
                   <span class="btn-text">Download CV</span>
                   <span class="btn-icon"><i class="fas fa-download"></i></span>
                 </a>
@@ -190,7 +199,10 @@
                 <img src="img/3.png" alt="" />
               </div>
               <div class="hover-items">
-                <h3>Project Source</h3>
+                <h3>Bret'les Homes</h3>
+
+                >
+
                 <div class="icons">
                   <a
                     href="https://github.com/CLAradores/Mini_2_-Project_Presentation.git"
@@ -215,7 +227,7 @@
                 <img src="img/2.png" alt="" />
               </div>
               <div class="hover-items">
-                <h3>Project Source</h3>
+                <h3>Lister</h3>
                 <div class="icons">
                   <a
                     href="https://github.com/CLAradores/Mini1-Project.git"
@@ -240,7 +252,7 @@
                 <img src="img/4.png" alt="" />
               </div>
               <div class="hover-items">
-                <h3>Project Source</h3>
+                <h3>Cinezone</h3>
                 <div class="icons">
                   <a
                     href="https://github.com/CLAradores/CineZone.git"
@@ -270,7 +282,7 @@
                 <img src="img/1.png" alt="" />
               </div>
               <div class="hover-items">
-                <h3>Project Source</h3>
+                <h3>KodeResto</h3>
                 <div class="icons">
                   <a
                     href="https://github.com/CLAradores/KodeResto.git"
@@ -295,7 +307,7 @@
                 <img src="img/5.png" alt="" />
               </div>
               <div class="hover-items">
-                <h3>Project Source</h3>
+                <h3>KodeCamp</h3>
                 <div class="icons">
                   <a
                     href="https://github.com/CLAradores/KodeCamp.git"
@@ -320,7 +332,7 @@
                 <img src="img/6.png" alt="" />
               </div>
               <div class="hover-items">
-                <h3>Project Source</h3>
+                <h3>KodeLedger</h3>
                 <div class="icons">
                   <a
                     href="https://github.com/CLAradores/KodeLedger.git"
@@ -345,7 +357,7 @@
                 <img src="img/7.png" alt="" />
               </div>
               <div class="hover-items">
-                <h3>Project Source</h3>
+                <h3>KodeNews</h3>
                 <div class="icons">
                   <a
                     href="https://github.com/CLAradores/KodeNews.git"
@@ -446,7 +458,11 @@
                     </a>
                   </div>
                   <div class="btn-con">
-                    <a href="" class="main-btn">
+                    <a
+                      href="./img/Charles_Lester_Radores_01CV.pdf"
+                      download="Charles_Lester_Radores_01CV.pdf"
+                      class="main-btn"
+                    >
                       <span class="btn-text">Contact Me</span>
                       <span class="btn-icon"
                         ><i class="fa-solid fa-address-book"></i
@@ -481,7 +497,10 @@
     </div>
     <script>
       const imgElement = document.querySelector('#img img');
+      const textColorElement = document.querySelector('.theme-btn');
+      const spanElement = document.querySelector('.main-content p span'); // Add this line to select the specific span
       let currentImage = 'img/img1.jpg';
+      let isColorChanged = false;
 
       function preloadImage(url) {
         const img = new Image();
@@ -498,6 +517,18 @@
           imgElement.src = 'img/img1.jpg';
           currentImage = 'img/img1.jpg';
         }
+
+        // Toggle the color of the text
+        if (isColorChanged) {
+          textColorElement.style.color = '#27ae60';
+          spanElement.style.color = '#27ae60'; // Add this line to toggle the color of the span
+        } else {
+          textColorElement.style.color = '#f56692';
+          spanElement.style.color = '#f56692'; // Add this line to toggle the color of the span
+        }
+
+        // Toggle the state
+        isColorChanged = !isColorChanged;
       }
     </script>
     <script src="app.js"></script>
